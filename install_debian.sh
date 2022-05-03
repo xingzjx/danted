@@ -46,7 +46,7 @@ generate_config_ip(){
     cat <<EOF
 # Generate interface ${ipaddr}
 internal: ${ipaddr}  port = ${port}
-external: ${ipaddr}
+external: 0.0.0.0
 
 EOF
 }
