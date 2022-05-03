@@ -19,8 +19,9 @@ BIN_PATH="/etc/danted/sbin/sockd"
 CONFIG_PATH="/etc/danted/sockd.conf"
 BIN_SCRIPT="/etc/init.d/sockd"
 
-DEFAULT_IPADDR=$(ip addr | grep 'inet ' | grep -Ev 'inet 127|inet 192\.168' | \
-            sed "s/[[:space:]]*inet \([0-9.]*\)\/.*/\1/")
+# DEFAULT_IPADDR=$(ip addr | grep 'inet ' | grep -Ev 'inet 127|inet 192\.168' | \
+#             sed "s/[[:space:]]*inet \([0-9.]*\)\/.*/\1/")
+DEFAULT_IPADDR='0.0.0.0'
 RUN_PATH=$(cd `dirname $0`;pwd )
 RUN_OPTS=$*
 
